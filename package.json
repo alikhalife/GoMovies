@@ -1,0 +1,23 @@
+{
+  "name": "gomovies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alikhalife/GoMovies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alikhalife/GoMovies/issues"
+  },
+  "homepage": "https://github.com/alikhalife/GoMovies#readme",
+  "dependencies": {
+    "sass": "^1.49.11"
+  }
+}
