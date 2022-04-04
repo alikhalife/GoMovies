@@ -85,6 +85,10 @@ for (let index = 550; index <= 700; index++) {
     }
 
     const root = document.getElementById('root')
+          root.style.display = 'flex'
+          root.style.flexWrap = 'wrap'
+    const container = document.createElement('div')
+          container.style.width = '200px'
     const cardTitle = document.createElement('h3')
     const cardReleaseDate = document.createElement('p')
     const cardOverview = document.createElement('p')
@@ -94,7 +98,6 @@ for (let index = 550; index <= 700; index++) {
 
     getData()
         .then(res => {
-            console.log(res)
             saveData(res)
             cardTitle.innerText = res.original_title
             cardReleaseDate.innerText = res.release_date
@@ -103,10 +106,12 @@ for (let index = 550; index <= 700; index++) {
         })
         .catch(error => error)
 
-    root.appendChild(cardTitle)
-    root.appendChild(cardReleaseDate)
-    root.appendChild(cardOverview)
-    root.appendChild(cardImg)
+    container.appendChild(cardTitle)
+    container.appendChild(cardReleaseDate)
+    container.appendChild(cardOverview)
+    container.appendChild(cardImg)
+    root.appendChild(container)
+
 }
 
 console.log(title)
