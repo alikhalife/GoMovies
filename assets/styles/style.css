@@ -924,6 +924,20 @@ ul {
   text-align: justify;
 }
 
+.div-btn-close{
+  width: 1000px;
+  display: flex;
+  justify-content: end;
+}
+
+.btn-close-modal{
+  width: 65px;
+  height: 35px;
+  background-color: #FF7245;
+  margin-top: 20px;
+  padding: 3px;
+}
+
 /* ---------- modale fin ---------- */
 
 .div-start{
