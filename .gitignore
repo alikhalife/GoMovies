@@ -10,6 +10,8 @@
 
 # production
 /build
+card.html
+card.css
 
 # misc
 /.idea
