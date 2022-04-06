@@ -12,6 +12,7 @@
 /build
 card.html
 card.css
+app.js
 
 # misc
 /.idea
