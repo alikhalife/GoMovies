@@ -5,11 +5,49 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="assets/styles/style.css">
-    <title>title</title>
+
+    <title>GoMovies</title>
 </head>
 <body>
-    <h1>hello world</h1>
+
+    <h1 class="text-3xl font-bold underline"> Welcome to GoMovies</h1>
+
+    <table>
+        <!-- ... -->
+        <tbody>
+         
+            <!-- Use a white background for odd rows, and slate-100 for even rows -->
+            <tr class="odd:bg-white even:bg-slate-100">
+              <td>{person.name1}</td>
+              <td>{person.title}</td>
+              <td>{person.email}</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-slate-100">
+                <td>{person.name2}</td>
+                <td>{person.title}</td>
+                <td>{person.email}</td>
+              </tr>
+              <tr class="odd:bg-white even:bg-slate-100">
+                <td>{person.name3}</td>
+                <td>{person.title}</td>
+                <td>{person.email}</td>
+              </tr>
+         
+            
+        </tbody>
+      </table>
+
+    <div>Nav bar</div>
+
+    <div>Movies Banner</div>
+
+    <div>New Releases</div>
+    <div>Ready to get Started</div>
+    <div>Footer</div>
+
     <script src="assets/scripts/app.js"></script>
 </body>
 </html>
