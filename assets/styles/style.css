@@ -940,14 +940,14 @@ ul {
 
 /* ---------- modale fin ---------- */
 
-.div-start{
+/* .div-start{
   margin-left: 75px;
   margin-right: 75px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   color: #f8f8f8;
-}
+} */
 
 .hover\:bg-indigo-700:hover {
   --tw-bg-opacity: 1;
