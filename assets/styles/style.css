@@ -866,13 +866,22 @@ ul {
 .movie_preview{
   position: absolute;
   z-index: 5;
-  bottom: 0;
+  bottom: 130px;
+  left: 150px;
+  width: 450px;
+  height: 300px;
 }
 
 .movie_title{
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+}
+
+.genre_rate{
+  margin: 15px 0 20px 0;
+  display: flex;
+  gap: 20px;
 }
 
 .movie_genre{
@@ -891,13 +900,32 @@ ul {
   height: 20px;
 }
 
+.movie_desc{
+  margin-top: 0;
+}
+
+.movie_trailer{
+  background-color: #FF7245;
+  margin: auto auto 0px auto;
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
 .elipse{
+  width: 12px;
+  gap: 10px;
   display: flex;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #carrousel {
   width: 100%;
-  height: 100%;
   border: solid 1px #000000;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
   position: relative;

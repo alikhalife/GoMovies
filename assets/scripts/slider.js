@@ -17,6 +17,7 @@ document.body.onload=function(){
         contain_carrousel.appendChild(div);
     }
     console.log(screenW);
+    // elipse=document.getElementById('elipse');
     right.onclick=function(){
         if(counter === 3){
             counter=0;
