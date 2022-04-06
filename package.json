@@ -19,5 +19,8 @@
   "homepage": "https://github.com/alikhalife/GoMovies#readme",
   "dependencies": {
     "sass": "^1.49.11"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7"
   }
 }
