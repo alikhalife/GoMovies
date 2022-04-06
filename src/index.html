@@ -14,13 +14,29 @@
             <div class="logo">
                 <p>GO Movies</p>
             </div>
+            <nav class="nav_mobile">
+                <a href="#Home" class="logo_act">GO Movies</a>
+                
+                <div class="contain_burger">
+                <div class="burger" id="burger">
+                    <div id="links">
+                        <a href="#profile">Profile</a>
+                        <a href="#all">All</a>
+                        <a href="#favorite">Favorite</a>
+                        <a href="saved">Saved</a>
+                        <a href="settings">Settings</a>
+                    </div>
+                </div>
+                
+            </div>
+            </nav>
             <div id="nav">
                 <a href="#home"><img src="/assets/images/carrousel/Vector.svg" alt="Home"></a>
-                <a href="#account"><img src="/assets/images/carrousel/Vector(1).svg" alt="Account"></a>
-                <a href="#B-A"><img src="/assets/images/carrousel/Vector(2).svg" alt="Bande Annonce"></a>
-                <a href="#Favoris"><img src="/assets/images/carrousel/Vector(3).svg" alt="Favoris"></a>
+                <a href="#profile"><img src="/assets/images/carrousel/Vector(1).svg" alt="Profile"></a>
+                <a href="#all"><img src="/assets/images/carrousel/Vector(2).svg" alt="all films"></a>
+                <a href="#favorite"><img src="/assets/images/carrousel/Vector(3).svg" alt="Favorite"></a>
                 <a href="#Download"><img src="/assets/images/carrousel/Vector(4).svg" alt="Download"></a>
-                <a href="#Paramètres"><img src="/assets/images/carrousel/Vector(5).svg" alt="Paramètres"></a>
+                <a href="#Settings"><img src="/assets/images/carrousel/Vector(5).svg" alt="Paramètres"></a>
             </div>
             <div id="carrousel">
                 <div id="contain_carrousel"></div>
@@ -41,14 +57,17 @@
                     <button class="movie_trailer">Play Trailer</button>
                 </div>
                 <div id="elipse" class="elipse">
-                    <img src="/assets/images/carrousel/Ellipse 2.svg" alt="empty elipse">
-                    <img src="/assets/images/carrousel/Ellipse 2.svg" alt="empty elipse">
-                    <img src="/assets/images/carrousel/Ellipse 2.svg" alt="empty elipse">
+                    <div class="lps-items lps-active"></div>
+                    <div class="lps-items lps"></div>
+                    <div class="lps-items lps"></div>
+                    <!-- <img id='elipseImg1' src="/assets/images/carrousel/Ellipse1.svg" alt="full elipse">
+                    <img id='elipseImg2' src="/assets/images/carrousel/Ellipse2.svg" alt="empty elipse">
+                    <img id='elipseImg3' src="/assets/images/carrousel/Ellipse2.svg" alt="empty elipse"> -->
                 </div>
             </div>
         </div>
         <div class="newMovie"></div>
-        <!-- <div class="started">
+        <div class="started">
             <div class="items-center">
                 <div class="bg-orange items-center">
                     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
@@ -67,9 +86,9 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
-    <!-- <footer>
+    <footer>
         <div class="go">
             <h3>GO Movies</h3>
             <p>(c)2010-2022</p>
@@ -101,7 +120,8 @@
                 <li>Company</li>
             </ul>
         </div>
-    </footer> -->
+    </footer>
+    <script src="/assets/scripts/burger.js"></script>
     <script src="/assets/scripts/slider.js"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
