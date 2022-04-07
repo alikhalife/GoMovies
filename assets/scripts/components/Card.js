@@ -8,24 +8,62 @@ class Card_Modal {
         this.genre = ''
         this.overview= movie.overview
         this.releaseDate = movie.release_date
+        this.rate = movie.vote_average
     }
 
     appendCardInHtml() {
         i++
+    
+        // return this.root.innerHTML +=  ` 
+        //     <div>
+        //         <h3>${this.title}</h3>
+        //     </div>
+        //     <div>
+        //         <p>${this.genre}</p>
+        //     </div>
+        //     <div>
+        //         <img id="${i}" class="affiche" src="${this.poster}" alt="image of movie">
+        //         <div>
+        //             <p>${this.releaseDate}</p>
+        //             <p>${this.overview}</p>
+        //         </div>
+        //     </div> `
+
         return this.root.innerHTML +=  ` 
+        <div class="card">
             <div>
-                <h3>${this.title}</h3>
+                <div class="poster">
+                <img id="${i}" class="affiche" src="${this.poster}" alt="poster movie"></img>
             </div>
-            <div>
-                <p>${this.genre}</p>
-            </div>
-            <div>
-                <img id="${i}" class="affiche" src="${this.poster}" alt="image of movie">
-                <div>
-                    <p>${this.releaseDate}</p>
+
+            <div class="details">
+                <h2>${this.title}</h2>
+                <h4>Directed by</h4>
+
+                <div class="rating">
+                    <p>STARS</p>
+                    <span>${this.rate}</span>
+                </div>
+
+                <div class="tags">
+                    <span class="genres">${this.genre}</span>
+                </div>
+
+                <div class="info">
                     <p>${this.overview}</p>
                 </div>
-            </div> `
+
+                <div class="casting">
+                    <h4>Cast</h4>
+
+                    <ul>
+                        <li>Name1</li>
+                        <li>Name2</li>
+                        <li>Name3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>`
     }
 
     createObj(){
