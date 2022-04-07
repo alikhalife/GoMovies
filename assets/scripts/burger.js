@@ -5,6 +5,7 @@ let boolean = false;
 
 burger.addEventListener('click', ()=>{
     links.style.display = "block";
+    // links.setAttribute
     boolean = true;
     if (boolean = true) {
         burger.addEventListener('click', () => {
