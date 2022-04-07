@@ -12,6 +12,7 @@
 /build
 
 # misc
+assets/scripts/.hidden
 /.idea
 .DS_Store
 .env.local
