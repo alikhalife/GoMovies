@@ -37,12 +37,12 @@ class Card_Modal {
             </div>
 
             <div class="details">
-                <h2>${this.title}</h2>
-                <h4>Directed by</h4>
+                <h2 class="card-title">${this.title}</h2>
+                <h4 class="card-directed">Directed by</h4>
 
                 <div class="rating">
-                    <p>STARS</p>
-                    <span>${this.rate}</span>
+                    <p class="card-stars">STARS</p>
+                    <span class="card-rate">${this.rate}</span>
                 </div>
 
                 <div class="tags">
