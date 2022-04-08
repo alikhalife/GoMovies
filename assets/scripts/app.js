@@ -6,8 +6,6 @@ let j = 0
 let arrIdTrailer = ['idVide']
 let arrOfKeyTrailer = ['vide']
 
-let a = 0
-
 const arrayOfCard = []
 
 let cardElementRoot = document.getElementById('card')
@@ -45,30 +43,58 @@ fetchTrendingMovies()
         arrayOfCard.forEach(el => {
             movie_id = el.id
             arrIdTrailer.push(movie_id)
-            
+
             genreResponse.genres.forEach(elem => {
                 if(el.genreID === elem.id){
                     el.genre = elem.name
                 }
             })
-            
+              
             fetchMoviesTrailers()
                 .then(trailer => {
-                    a++
                     // console.log('fetchMoviesTrailers')
                     // console.log(trailer.results[0].key)
-                    // el.trailerKey = trailer.results[0].key
-                    arrOfKeyTrailer.push(trailer.results[1].key)
-                    console.log('a  ' + a)
-                    console.log(trailer.results[1].key)
+                    
+                    // trailerKey = trailer.results[1].key
+
+                    console.log(trailer.results)
+
+                    if (typeof trailer.results === 'undefined' || trailer.results.length === 0){
+                        arrOfKeyTrailer.push('null')
+                        console.log('pas ok')
+                    }else{
+                        arrOfKeyTrailer.push(trailer.results[1].key)
+                        console.log('ok')
+                    }
+
+                    // console.log(trailer)
+                    // switch(trailer.results){
+                    //     case undefined:
+                    //         // arrOfKeyTrailer.push(undefined)
+                    //         console.log('pas ok')
+                    //         break
+                    //     case trailer.results.length < 1:
+                    //         // arrOfKeyTrailer.push(null)
+                    //         console.log('pas ok')
+                    //         break
+                    //     default:
+                    //         // arrOfKeyTrailer.push(trailer.results[1].key)
+                    //         console.log('ok')
+
+                    // }
+                        
+                    // arrOfKeyTrailer.push(trailer.results[1].key)
+                    console.log(arrOfKeyTrailer)
+                    
+                    // console.log(trailer.results[1].key)
                     // console.log(el.trailerKey)
                 })
 
             el.appendCardInHtml()
             el.createObj()
         })
-        console.log(arrayOfCard)
-        console.log(el.createObj())
+        // console.log(arrayOfCard)
+        // console.log(el.createObj())
     })
     .catch(error => error)
 

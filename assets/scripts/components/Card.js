@@ -9,7 +9,7 @@ class Card_Modal {
         this.overview= movie.overview
         this.releaseDate = movie.release_date
         this.rate = movie.vote_average
-        this.trailerKey = ''
+        this.trailerKey = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F800%2F1*hFwwQAW45673VGKrMPE2qQ.png&imgrefurl=https%3A%2F%2Fuxdesign.cc%2Fhow-to-design-a-404-error-page-that-keeps-users-on-your-site-f3443a980ece&tbnid=LaedmNfkaCQO_M&vet=12ahUKEwj97cDxyYT3AhVC2aQKHe9KDiMQMygJegUIARDUAQ..i&docid=96NoSMawAqxa9M&w=800&h=600&q=image%20404&ved=2ahUKEwj97cDxyYT3AhVC2aQKHe9KDiMQMygJegUIARDUAQ'
     }
 
     appendCardInHtml() {
