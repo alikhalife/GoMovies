@@ -1,20 +1,20 @@
-async function main() {
-    let bannerMovies = await getBannerMovies()
-    console.log(bannerMovies)
-}
+// async function main() {
+//     let bannerMovies = await getBannerMovies()
+//     console.log(bannerMovies)
+// }
 
-main()
+// main()
 
-async function getBannerMovies() {
-    let bannerMovies = []
-    for (let i = 550; i <= 552; i++) {
-        let resp = await fetch(`https://api.themoviedb.org/3/movie/${i}?api_key=46077ce24d4f82dbcaa2828a33a34916`)
+// async function getBannerMovies() {
+//     let bannerMovies = []
+//     for (let i = 550; i <= 552; i++) {
+//         let resp = await fetch(`https://api.themoviedb.org/3/movie/${i}?api_key=46077ce24d4f82dbcaa2828a33a34916`)
 
-        let movie = await resp.json()
-        bannerMovies.push(movie)
-    }
-    return bannerMovies;
-}
+//         let movie = await resp.json()
+//         bannerMovies.push(movie)
+//     }
+//     return bannerMovies;
+// }
 
 let i = 0
 const arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
@@ -48,7 +48,7 @@ fetchTrendingMovies()
     //     })
     // })
     // .catch(error => error)
-    
+
     .then(fetchTrendingMovieResponse => {
         console.log(fetchTrendingMovieResponse)
         fetchTrendingMovieResponse.results.forEach(el => {
@@ -59,7 +59,7 @@ fetchTrendingMovies()
     .then(genreResponse => {
         arrayOfCard.forEach(el => {
             genreResponse.genres.forEach(elem => {
-                if(el.genreID === elem.id){
+                if (el.genreID === elem.id) {
                     el.genre = elem.name
                 }
             })
@@ -72,12 +72,12 @@ fetchTrendingMovies()
 
 
 window.addEventListener('click', (event) => {
-    if(event.target.matches('img.affiche')){
+    if (event.target.matches('img.affiche')) {
         console.log('bon div')
         div_modal.style.display = 'flex'
 
         arr.forEach(el => {
-            if(el === event.target.getAttribute('id')){
+            if (el === event.target.getAttribute('id')) {
                 console.log(el)
                 console.log(arrObj[el].title)
 
@@ -96,5 +96,5 @@ window.addEventListener('click', (event) => {
                     <p class="synopsis">${arrObj[el].synopsis}</p>`
             }
         })
-    } 
+    }
 })

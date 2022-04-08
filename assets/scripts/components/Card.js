@@ -25,7 +25,7 @@ class Card {
 let cardElementRoot = document.getElementById('card')
 
 const fetchTrendingMovies = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/trending/all/day?api_key=46077ce24d4f82dbcaa2828a33a34916')
+    const data = await fetch(`https://api.themoviedb.org/3/trending/all/day?${api_key}`)
     return await data.json()
 }
 
