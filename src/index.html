@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <title>GoMovies</title>
 </head>
+
 <body>
-    <div class="container">
+    <div class="container mx-auto">
         <div class="header">
             <div class="logo">
                 <p>GO Movies</p>
             </div>
             <nav class="nav_mobile">
                 <a href="#Home" class="logo_act">GO Movies</a>
-                
+
                 <div class="contain_burger">
-                <div class="burger" id="burger">
-                    <div div="link" class="links">
-                        <a href="#home">Home</a>
-                        <a href="#profile">Profile</a>
-                        <a href="#all">All</a>
-                        <a href="#favorite">Favorite</a>
-                        <a href="saved">Saved</a>
-                        <a href="settings">Settings</a>
+                    <div class="burger" id="burger">
+                        <div id="link" class="links">
+                            <a href="#home">Home</a>
+                            <a href="#profile">Profile</a>
+                            <a href="#all">All</a>
+                            <a href="#favorite">Favorite</a>
+                            <a href="saved">Saved</a>
+                            <a href="settings">Settings</a>
+                        </div>
                     </div>
+
                 </div>
-                
-            </div>
             </nav>
             <div id="nav">
                 <a href="#home"><img src="/assets/images/carrousel/Vector.svg" alt="Home"></a>
@@ -43,7 +45,9 @@
                 <div id="contain_carrousel"></div>
                 <img src="/assets/images/carrousel/arrow.svg" class="bouton" id="r" alt="Arrow">
                 <div class="movie_preview">
-                    <div class="movie_title"><p>MOVIE TITLE</p></div>
+                    <div class="movie_title">
+                        <p>MOVIE TITLE</p>
+                    </div>
                     <div class="genre_rate">
                         <div class="movie_genre">Movie Genre</div>
                         <div class="movie_rate">
@@ -54,7 +58,11 @@
                             <img src="/assets/images/carrousel/star.svg" alt="star">
                         </div>
                     </div>
-                    <div class="movie_desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nulla odit veniam harum, consectetur animi, voluptatibus doloribus doloremque id numquam culpa debitis ut? Exercitationem minus ratione dolore, sint eum ad.</p></div>
+                    <div class="movie_desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nulla odit veniam harum,
+                            consectetur animi, voluptatibus doloribus doloremque id numquam culpa debitis ut?
+                            Exercitationem minus ratione dolore, sint eum ad.</p>
+                    </div>
                     <button class="movie_trailer">Play Trailer</button>
                 </div>
                 <div id="elipse" class="elipse">
@@ -65,62 +73,109 @@
             </div>
         </div>
         <div class="newMovie"></div>
-        <div class="started">
+        <!-- <div class="started">
             <div class="items-center">
                 <div class="bg-orange items-center">
                     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-                      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                        <span class="block">Sign up</span>
-                        <span class="block text-indigo-600">or contact us.</span>
+                      <h2 class="text-xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        <span class="block text-white">Sign up or contact us.</span>
+                        <span class="block text-indigo-600"></span>
                       </h2>
                       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                         <div class="inline-flex rounded-md shadow">
-                          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"> Get started </a>
+                          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black"> Get started </a>
                         </div>
                         <div class="ml-3 inline-flex rounded-md shadow">
-                          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"> Contact us </a>
+                          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black"> Contact us </a>
                         </div>
                       </div>
                     </div>
                 </div>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="signup_contain">
+        <div class="ti">
+            <h2>READY TO GET STARTED ?</h2>
+        </div>
+        <div class="sign_contain">
+            <div class="start">
+                <p>Sign-up or contact us.</p>
+                <div class="btn">
+                    <button class="Sign">Sign-up</button>
+                    <button class="Contact">Contact us</button>
+                </div>
+            </div>
+            <div class="bcgc">
+                <img src="/assets/images/pexels-matheus-bertelli-2376994.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE_SIGN -->
+    <div class="signup_contain_mob">
+
+        <div class="sign_contain_mob">
+
+            <div class="ti_mobile">
+                <h2>READY TO GET STARTED ?</h2>
+            </div>
+            <div class="start_mob">
+                <p>Sign-up or contact us.</p>
+                <div class="btn_mob">
+                    <button class="Sign_mob">Sign-up</button>
+                    <button class="Contact_mob">Contact us</button>
+                </div>
+                <!-- <div class="bcgc_mob">
+                    <img src="/assets/images/pexels-matheus-bertelli-2376994.jpg" alt="">
+                </div> -->
             </div>
         </div>
     </div>
     <footer>
         <div class="go">
             <h3>GO Movies</h3>
-            <p>(c)2010-2022</p>
+            <p>© 2010-2022</p>
             <p>Privacy-Terms</p>
         </div>
         <div class="list">
-            <ul>
-                <li>Product</li>
-                <li>Product</li>
-                <li>Product</li>
-                <li>Product</li>
-            </ul>
-            <ul>
-                <li>Features</li>
-                <li>Features</li>
-                <li>Features</li>
-                <li>Features</li>    
-            </ul>
-            <ul>
-                <li>Ressources</li>
-                <li>Ressources</li>
-                <li>Ressources</li>
-                <li>Ressources</li>
-            </ul>
-            <ul>
-                <li>Company</li>
-                <li>Company</li>
-                <li>Company</li>
-                <li>Company</li>
-            </ul>
+                <div class="product">
+                    <p>Products</p>
+                    <ul>
+                        <li>Product</li>
+                        <li>Product</li>
+                        <li>Product</li>
+                    </ul>
+                </div>
+                <div class="features">
+                    <p>Features</p>
+                    <ul>
+                        <li>Features</li>
+                        <li>Features</li>
+                        <li>Features</li>
+                    </ul>
+                </div>
+                <div class="ressources">
+                    <p>Ressources</p>
+                    <ul>
+                        <li>Ressources</li>
+                        <li>Ressources</li>
+                        <li>Ressources</li>
+                    </ul>
+                </div>
+                <div class="company">
+                    <p>Company</p>
+                    <ul>
+                        <li>Company</li>
+                        <li>Company</li>
+                        <li>Company</li>
+                    </ul>
+                </div>
         </div>
     </footer>
     <script src="/assets/scripts/burger.js"></script>
     <script src="/assets/scripts/slider.js"></script>
     <script src="assets/scripts/app.js"></script>
 </body>
+
 </html>
