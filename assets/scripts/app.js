@@ -8,8 +8,6 @@ let cardElementRoot = document.getElementById('card')
 let trailer_infos = document.getElementById('div-trailer-infos')
 let movie_infos = document.getElementById('movie-infos')
 
-
-
 const fetchTrendingMovies = async () => {
     const data = await fetch(`https://api.themoviedb.org/3/trending/all/week?${api_key}`)
     return await data.json()
@@ -21,16 +19,6 @@ const fetchTrendingMoviesGenres = async () => {
 }
 
 fetchTrendingMovies()
-    // .then(response => {
-    //     console.log(response)
-    //     response.results.forEach(el => {
-    //         const card = new Card(el, cardElementRoot)
-    //         card.appendCardInHtml()
-    //         card.createObj()
-    //     })
-    // })
-    // .catch(error => error)
-    
     .then(fetchTrendingMovieResponse => {
         console.log(fetchTrendingMovieResponse)
         fetchTrendingMovieResponse.results.forEach(el => {
@@ -39,14 +27,17 @@ fetchTrendingMovies()
         return fetchTrendingMoviesGenres()
     })
     .then(genreResponse => {
-        arrayOfCard.forEach(el => {
-            genreResponse.genres.forEach(elem => {
-                if(el.genreID === elem.id){
-                    el.genre = elem.name
-                }
+        console.log(genreResponse)
+        arrayOfCard.forEach(card => {
+            card.genreID.forEach(id => {
+                genreResponse.genres.forEach(genreApi => {
+                    if (id === genreApi.id) {
+                        return  card.genre = genreApi.name
+                    }
+                })
             })
-            el.appendCardInHtml()
-            el.createObj()
+            card.appendCardInHtml()
+            card.createObj()
         })
         console.log(arrayOfCard)
     })
@@ -67,7 +58,7 @@ window.addEventListener('click', (event) => {
                     <iframe width="659.4" height="371" src="${arrObj[el].trailer}" title="${arrObj[el].title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     <div class="movie-details">
-                        <p>${arrObj[el].statusMovie}</p>
+                        <p>${arrObj[el].movieStatus}</p>
                         <p>${arrObj[el].date}</p>
                         <p>${arrObj[el].directedBy}</p>
                         <p>${arrObj[el].cast}</p>

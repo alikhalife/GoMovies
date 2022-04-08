@@ -3,7 +3,6 @@ const div_modal = document.getElementById('div-modal')
 const btn_close_modal = document.getElementById('btn-close-modal')
 
 
-
 // btn_modal.addEventListener('click', () => {
 //     div_modal.style.display = 'flex'
 // })

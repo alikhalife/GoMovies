@@ -1,11 +1,26 @@
 class Card_Modal {
     constructor(movie, root) {
+        // element to append on html
         this.root = root
+
+        // base url
+        this.baseUrl = `https://image.tmdb.org/t/p/w500`
+
+        // data from api
         this.id = movie.id
-        this.poster = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-        this.title = movie.original_title
-        this.genreID = movie.genre_ids[0]
-        this.genre = ''
+
+        // image
+        this.poster = movie.poster_path
+
+        // title
+        this.originalTitle = movie.original_title
+        this.originalName = movie.original_name
+        this.title = movie.title
+
+        // genre
+        this.genreID = movie.genre_ids
+        this.genre = 'no genre'
+
         this.overview= movie.overview
         this.releaseDate = movie.release_date
         this.rate = movie.vote_average
@@ -13,31 +28,15 @@ class Card_Modal {
 
     appendCardInHtml() {
         i++
-    
-        // return this.root.innerHTML +=  ` 
-        //     <div>
-        //         <h3>${this.title}</h3>
-        //     </div>
-        //     <div>
-        //         <p>${this.genre}</p>
-        //     </div>
-        //     <div>
-        //         <img id="${i}" class="affiche" src="${this.poster}" alt="image of movie">
-        //         <div>
-        //             <p>${this.releaseDate}</p>
-        //             <p>${this.overview}</p>
-        //         </div>
-        //     </div> `
-
         return this.root.innerHTML +=  ` 
         <div class="card">
             <div>
                 <div class="poster">
-                <img id="${i}" class="affiche" src="${this.poster}" alt="poster movie"></img>
+                <img id="${i}" class="affiche" src="${this.baseUrl + this.poster}" alt="poster movie"></img>
             </div>
 
             <div class="details">
-                <h2>${this.title}</h2>
+                <h2>${this.getTitle()}</h2>
                 <h4>Directed by</h4>
 
                 <div class="rating">
@@ -66,7 +65,17 @@ class Card_Modal {
         </div>`
     }
 
-    createObj(){
+    getTitle() {
+        if (this.title !== undefined) {
+            return this.title
+        } else if (this.originalTitle !== undefined) {
+            return this.originalTitle
+        } else if (this.originalName !== undefined) {
+            return this.originalName
+        }
+    }
+
+    createObj() {
         const obj = {
             id: i,
             trailer: 'url',
@@ -77,41 +86,7 @@ class Card_Modal {
             title: this.title,
             synopsis: this.overview
         }
+
         arrObj.push(obj)
     }
 }
-
-// class ModalVideo{
-//     constructor(movie, vidHTML){
-//         this.vidHTML = vidHTML
-//         this.videoUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-//         this.name = movie.original_title
-//         this.status = 'Release'
-//         this.date = movie.release_date
-//         this.directedBy = 'Mme'
-//         this.distribution = '1, 2, 3'
-//         this.synopsis = movie.overview
-//     }
-
-//     appendModalVideoInfosinHtml(){
-//         return this.vidHTML.innerHTML += `        
-//             <video id="trailer-vid" class="trailer-video" controls>
-//                 <source src="${this.videoUrl}" type="video/mp4">
-//                 Your browser does not support HTML video.
-//             </video>
-  
-//             <div class="movie-details">
-//                 <p>${this.status}</p>
-//                 <p>${this.date}</p>
-//                 <p>${this.directedBy}</p>
-//                 <p>${this.distribution}</p>
-//             </div>`
-//     }
-
-//     appendModalNameSynopsisinHtml(){
-//         return this.vidHTML.innerHTML += `
-//         <h4 class="movie-name"><strong>${this.name}</strong></h4>
-  
-//         <p class="synopsis">${this.synopsis}</p>`
-//     }
-// }
