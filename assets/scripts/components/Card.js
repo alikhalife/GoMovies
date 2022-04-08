@@ -33,11 +33,10 @@ class Card_Modal {
 
         return this.root.innerHTML +=  ` 
         <div class="card">
-            <div>
-                <div class="poster">
+            <div class="poster">
                 <img id="${i}" class="affiche" src="${this.poster}" alt="poster movie"></img>
             </div>
-
+        
             <div class="details">
                 <h2>${this.title}</h2>
                 <h4>Directed by</h4>
@@ -82,6 +81,7 @@ class Card_Modal {
         arrObj.push(obj)
     }
 }
+
 
 // class ModalVideo{
 //     constructor(movie, vidHTML){

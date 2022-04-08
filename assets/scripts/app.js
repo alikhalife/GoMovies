@@ -72,29 +72,34 @@ fetchTrendingMovies()
 
 
 window.addEventListener('click', (event) => {
-    if (event.target.matches('img.affiche')) {
+    if (event.target.matches('img.affiche') || event.target.matches('h2.card-title') 
+    || event.target.matches('h4.card-directed') || event.target.matches('p.card-stars') 
+    || event.target.matches('span.card-rate') || event.target.matches('span.genres')) {
         console.log('bon div')
+       
+
+    if(window.innerwidth > 600){
         div_modal.style.display = 'flex'
-
-        arr.forEach(el => {
-            if (el === event.target.getAttribute('id')) {
-                console.log(el)
-                console.log(arrObj[el].title)
-
-                trailer_infos.innerHTML = `
-                    <iframe width="659.4" height="371" src="${arrObj[el].trailer}" title="${arrObj[el].title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                    <div class="movie-details">
-                        <p>${arrObj[el].statusMovie}</p>
-                        <p>${arrObj[el].date}</p>
-                        <p>${arrObj[el].directedBy}</p>
-                        <p>${arrObj[el].cast}</p>
-                    </div>`
-
-                movie_infos.innerHTML = `
-                    <h4 class="movie-name"><strong>${arrObj[el].title}</strong></h4>
-                    <p class="synopsis">${arrObj[el].synopsis}</p>`
-            }
-        })
+            arr.forEach(el => {
+                if (el === event.target.getAttribute('id')) {
+                    console.log(el)
+                    console.log(arrObj[el].title)
+    
+                    trailer_infos.innerHTML = `
+                        <iframe width="659.4" height="371" src="${arrObj[el].trailer}" title="${arrObj[el].title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                        <div class="movie-details">
+                            <p>${arrObj[el].statusMovie}</p>
+                            <p>${arrObj[el].date}</p>
+                            <p>${arrObj[el].directedBy}</p>
+                            <p>${arrObj[el].cast}</p>
+                        </div>`
+    
+                    movie_infos.innerHTML = `
+                        <h4 class="movie-name"><strong>${arrObj[el].title}</strong></h4>
+                        <p class="synopsis">${arrObj[el].synopsis}</p>`
+                }
+            })
+        }
     }
 })
