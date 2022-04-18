@@ -12,6 +12,8 @@
 /build
 
 # misc
+assets/styles/style.css
+assets/styles/style.css.map
 assets/scripts/.hidden
 /.idea
 .DS_Store

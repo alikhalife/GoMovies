@@ -3,6 +3,7 @@ class Card_Modal {
         this.root = root
         this.id = movie.id
         this.poster = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+        this.backdrop = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
         this.title = movie.original_title
         this.genreID = movie.genre_ids[0]
         this.genre = ''
